@@ -1,0 +1,13 @@
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.csprojAssemblyReference.cache
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.AssemblyInfoInputs.cache
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.AssemblyInfo.cs
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.csproj.CoreCompileInputs.cache
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\bin\Debug\netcoreapp3.1\ExercicioAplicacaoISI.exe
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\bin\Debug\netcoreapp3.1\ExercicioAplicacaoISI.deps.json
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\bin\Debug\netcoreapp3.1\ExercicioAplicacaoISI.runtimeconfig.json
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\bin\Debug\netcoreapp3.1\ExercicioAplicacaoISI.runtimeconfig.dev.json
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\bin\Debug\netcoreapp3.1\ExercicioAplicacaoISI.dll
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\bin\Debug\netcoreapp3.1\ExercicioAplicacaoISI.pdb
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.dll
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.pdb
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.genruntimeconfig.cache
