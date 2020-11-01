@@ -17,9 +17,8 @@ namespace ExercicioAplicacaoISI
 
         public static void GravaJson()
         {
-            Dictionary<int, string> bla = ExercicioAplicacaoISI.Program.dicLocais;
             ///Serializa o objeto para JSON e guarda-o numa string 
-            var localJSON = new JavaScriptSerializer().Serialize(bla);
+            var localJSON = new JavaScriptSerializer().Serialize(ExercicioAplicacaoISI.Program.lista);
             // Escreve o texto nas strings nos respetivos ficheiros *.json
             File.WriteAllText(localPath, localJSON);
         }

@@ -6,12 +6,13 @@ using System.Text.RegularExpressions;
 using System.Net.Http;
 using System.Collections.Generic;
 using System.Web;
+using System.Collections;
 
 namespace ExercicioAplicacaoISI
 {
     class Program
     {
-        public static Dictionary<int, string> dicLocais = new Dictionary<int, string>();
+        public static List<KeyValuePair<int, string>> lista = new List<KeyValuePair<int, string>>();
 
         //private static async Task<string> GetData(string url)
         //{
@@ -85,19 +86,29 @@ namespace ExercicioAplicacaoISI
             return dicLocais;
            }
 
-            static void Main(string[] args)
+        static void Main(string[] args)
+        {
+            int i = 0;
+            Dictionary<int, string> dicLocais = LerLocais("../../locais.csv");
+            foreach (KeyValuePair<int, string> kv in dicLocais)
             {
-                Dictionary<int, string> dicLocais = LerLocais("../../locais.csv");
-                foreach (KeyValuePair<int, string> kv in dicLocais)
-                {
-                    Console.WriteLine($"globalIdLocal = {kv.Key} cidade = {kv.Value}");
 
-                }
+                lista[i] = kv;
+                //lista.Add(kv);
+                //lista.Insert(i, kv);
 
-                ExercicioAplicacaoISI.JSON.GravaJson();
-
-
+                Console.WriteLine($"globalIdLocal = {kv.Key} cidade = {kv.Value}");
+                Console.WriteLine($"globalIdLocal = {lista[i].Key} cidade = {lista[i].Value}");
+                i++;
             }
+
+            Console.WriteLine("\n\n");
+            Console.ReadKey();
+
+            ExercicioAplicacaoISI.JSON.GravaJson();
+
+
+        }
 
         }
     }
