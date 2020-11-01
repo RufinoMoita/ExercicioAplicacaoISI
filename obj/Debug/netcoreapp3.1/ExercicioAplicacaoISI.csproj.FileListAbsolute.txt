@@ -11,3 +11,5 @@ C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistem
 C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.dll
 C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.pdb
 C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.genruntimeconfig.cache
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\bin\Debug\netcoreapp3.1\System.Web.Extensions.dll
+C:\Users\rui_g\OneDrive\Ambiente de Trabalho\IPCA\3º Ano\Integração de Sistemas de Informação\Trabalho Prático Opcional\ExercicioAplicacaoISI\obj\Debug\netcoreapp3.1\ExercicioAplicacaoISI.csproj.CopyComplete
