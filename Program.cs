@@ -7,26 +7,23 @@ using System.Net.Http;
 using System.Collections.Generic;
 using System.Xml;
 using System.Web.Script.Serialization;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace ExercicioAplicacaoISI
 {
     class Program
     {
-        static Dictionary<int, string> listaLocais = new Dictionary<int, string>();
+        //static Dictionary<int, string> listaLocais = new Dictionary<int, string>();
 
-        static PrevisaoIPMA LerPrevisoes(int globalIdLocal)
+        static PrevisaoIPMA LerPrevisao(int globalIdLocal)
         {
-            // Instanciar JavaScriptSerializer para converter o objeto para JSON
-            JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
-
-            string json = null;
-            //using (StreamReader reader = new StreamReader("data_forecast/" + globalIdLocal + ".json")) ;
-            string jsonPath = Path.GetFullPath(Path.Combine("data_forecast/" + globalIdLocal + ".json"));
-            json = File.ReadAllText(jsonPath);
-
-            PrevisaoIPMA obj = javaScriptSerializer.Deserialize<PrevisaoIPMA>(json);
-            obj.local = listaLocais[obj.globalIdLocal];
+            String jsonString = null;
+            using (StreamReader reader = new StreamReader(@"../../data_forecast/" + globalIdLocal + ".json"))
+            {
+                jsonString = reader.ReadToEnd();
+            }
+            PrevisaoIPMA obj = JsonSerializer.Deserialize<PrevisaoIPMA>(jsonString);
             return obj;
         }
 
@@ -36,7 +33,7 @@ namespace ExercicioAplicacaoISI
             Dictionary<int, string> dicLocais = new Dictionary<int, string>();
 
             // Expressão Regular para instanciar objeto Regex
-            String erString = @"^[0-9]+,[0-9],[0-9]+,[0-9]+,[A-Z]{3},[A-Z][a-z]+$";
+            String erString = @"^[0-9]{7},[123],([1-9]?\d,){2}[A-Z]{3},([^,\n]*)$";
 
 
             // Alternativa 02: depois de ler o conteúdo do ficheiro para uma stream, 
@@ -74,21 +71,19 @@ namespace ExercicioAplicacaoISI
         static void Main(string[] args)
         {
             Dictionary<int, string> dicLocais = LerLocais(@"../../locais.csv");
-
-            // Instanciar JavaScriptSerializer para converter o objeto para JSON
-            JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
+            string json;
 
             foreach (KeyValuePair<int, string> kv in dicLocais)
             {
-                Console.WriteLine($"globalIdLocal = {kv.Key} cidade = {kv.Value}");
+                //Console.WriteLine($"globalIdLocal = {kv.Key} cidade = {kv.Value}");
 
                 //Ler previsao para cada regiao
-                PrevisaoIPMA previsao = LerPrevisoes(kv.Key);
+                PrevisaoIPMA previsao = LerPrevisao(kv.Key);
 
                 //Atribuir o nome do local à previsão
                 previsao.local = kv.Value;
 
-                var json = javaScriptSerializer.Serialize(previsao);
+                json = JsonSerializer.Serialize(previsao);
 
                 if (!File.Exists(kv.Key + "-detalhes.json"))
                 {
