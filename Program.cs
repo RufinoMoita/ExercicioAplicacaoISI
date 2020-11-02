@@ -68,7 +68,7 @@ namespace ExercicioAplicacaoISI
 
             string jsonString;
 
-            using (StreamReader reader = new StreamReader(@"../../netcoreapp3.1/" + globalIdLocal + "-detalhes.json"))
+            using (StreamReader reader = new StreamReader(@"../netcoreapp3.1/" + globalIdLocal + "-detalhes.json"))
             {
                 jsonString = reader.ReadToEnd();
             }
@@ -90,6 +90,7 @@ namespace ExercicioAplicacaoISI
 
                 //Ler previsao para cada regiao
                 PrevisaoIPMA previsao = LerPrevisaoIPMA(kv.Key);
+                PrevisaoDia previsaoDia = LerFicheiroPrevisaoDia(kv.Key);
 
                 //Atribuir o nome do local à previsão
                 previsao.local = kv.Value;
@@ -101,8 +102,7 @@ namespace ExercicioAplicacaoISI
                     File.WriteAllText(kv.Key + "-detalhes.json", json);
                 }
 
-
-
+                Console.WriteLine("Temperatura Maxima {0}", previsaoDia.precipitaProb);
             }
 
             Console.ReadKey();
