@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.IO;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Net.Http;
 using System.Collections.Generic;
-using System.Xml;
-using System.Web.Script.Serialization;
 using System.Text.Json;
-using System.Text.Json.Serialization;
+using System.Runtime.CompilerServices;
 
 namespace ExercicioAplicacaoISI
 {
@@ -16,7 +11,7 @@ namespace ExercicioAplicacaoISI
     {
         //static Dictionary<int, string> listaLocais = new Dictionary<int, string>();
 
-        static PrevisaoIPMA LerPrevisao(int globalIdLocal)
+        static PrevisaoIPMA LerPrevisaoIPMA(int globalIdLocal)
         {
             String jsonString = null;
             using (StreamReader reader = new StreamReader(@"../../data_forecast/" + globalIdLocal + ".json"))
@@ -61,11 +56,27 @@ namespace ExercicioAplicacaoISI
                     }
                     else
                     {
-                        Console.WriteLine($"Linha inválida: {line}");
+                        //Console.WriteLine($"Linha inválida: {line}");
                     }
                 }
             }
             return dicLocais;
+        }
+
+        static PrevisaoDia LerFicheiroPrevisaoDia(int globalIdLocal)
+        {
+
+            string jsonString;
+
+            using (StreamReader reader = new StreamReader(@"../../netcoreapp3.1/" + globalIdLocal + "-detalhes.json"))
+            {
+                jsonString = reader.ReadToEnd();
+            }
+
+            PrevisaoDia previsao = JsonSerializer.Deserialize<PrevisaoDia>(jsonString);
+
+            return previsao;
+
         }
 
         static void Main(string[] args)
@@ -78,7 +89,7 @@ namespace ExercicioAplicacaoISI
                 //Console.WriteLine($"globalIdLocal = {kv.Key} cidade = {kv.Value}");
 
                 //Ler previsao para cada regiao
-                PrevisaoIPMA previsao = LerPrevisao(kv.Key);
+                PrevisaoIPMA previsao = LerPrevisaoIPMA(kv.Key);
 
                 //Atribuir o nome do local à previsão
                 previsao.local = kv.Value;
@@ -90,7 +101,10 @@ namespace ExercicioAplicacaoISI
                     File.WriteAllText(kv.Key + "-detalhes.json", json);
                 }
 
+
+
             }
+
             Console.ReadKey();
         }
 
