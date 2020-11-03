@@ -3,7 +3,6 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Text.Json;
-using System.Runtime.CompilerServices;
 
 namespace ExercicioAplicacaoISI
 {
@@ -75,6 +74,7 @@ namespace ExercicioAplicacaoISI
 
             PrevisaoDia previsao = JsonSerializer.Deserialize<PrevisaoDia>(jsonString);
 
+
             return previsao;
 
         }
@@ -101,8 +101,6 @@ namespace ExercicioAplicacaoISI
                 {
                     File.WriteAllText(kv.Key + "-detalhes.json", json);
                 }
-
-                Console.WriteLine("Temperatura Maxima {0}", previsaoDia.precipitaProb);
             }
 
             Console.ReadKey();
